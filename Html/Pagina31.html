@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The picture Element</title>
+</head>
+<body>
+    <h2>The picture Element</h2>
+
+    <picture>
+      <source srcset="./imagens/img_avatar.png">
+      <source srcset="./imagens/img_girl.jpg">
+      <img src="./imagens/img_beatles.gif" alt="Beatles" style="width:auto;">
+    </picture>
+    
+    <p>The picture element can be used when the image format is not supported by all devices.</p>
+    
+    <p>The device will use the first image format it supports, and ignore the rest of the images.</p>    
+</body>
+</html>
