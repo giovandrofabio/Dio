@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/13 11:48:59.000.844,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/10 11:01:06.000.244,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/25 10:35:49.000.664,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 16:48:01.000.957,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/05 17:32:51.000.041,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/05 17:34:04.000.013,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\UnitPrincipal.fmx</Transaction>
+    <Transaction>2021/11/05 17:34:04.000.013,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\UnitPrincipal.pas</Transaction>
+    <Transaction>2021/11/05 17:34:17.000.630,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\ServerRDW.dproj</Transaction>
+    <Transaction>2021/11/05 20:31:23.000.621,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\Unit1.pas</Transaction>
+    <Transaction>2021/11/05 20:31:56.000.185,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\Controller\Controller.Carro.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\Unit1.pas</Transaction>
+    <Transaction>2021/11/05 20:33:31.000.514,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\DAO\DAO.Connection.pas</Transaction>
+    <Transaction>2021/11/05 20:33:31.000.498,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\DAO\DAO.Carro.pas</Transaction>
+    <Transaction>2021/11/05 20:34:26.000.756,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Backend RDW\Controller\Controller.Comum.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="Celular" Android64="Celular"/>
+	</ActiveMobileDevice>
+</BorlandProject>

@@ -1,0 +1,5 @@
+object DmCarro: TDmCarro
+  OldCreateOrder = False
+  Height = 293
+  Width = 428
+end

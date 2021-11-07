@@ -1,0 +1,22 @@
+program iMotors;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  UnitLogin in 'UnitLogin.pas' {FrmLogin},
+  UnitPrincipal in 'UnitPrincipal.pas' {FrmPrincipal},
+  UnitCarroDetalhe in 'UnitCarroDetalhe.pas' {FrmCarroDetalhe},
+  UnitCarroCad in 'UnitCarroCad.pas' {FrmCarroCad},
+  DataModuleCarro in 'Services\DataModuleCarro.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmLogin, FrmLogin);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmCarroDetalhe, FrmCarroDetalhe);
+  Application.CreateForm(TFrmCarroCad, FrmCarroCad);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

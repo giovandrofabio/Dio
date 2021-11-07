@@ -1,0 +1,64 @@
+unit UnitPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+
+  System.JSON,
+  uRESTDWBaseIDQX,
+  uDWConsts,
+  uDWJSONObject,
+  uDWJSONTools,
+  ServerUtils,
+
+  Controller.Carro;
+
+type
+  TFrmPrincipal = class(TForm)
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    RESTDWServerQXID : TRESTDWServerQXID;
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+   RESTDWSERVERIDQX.Active := False;
+   RESTDWSERVERIDQX.Free;
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+   RESTDWSERVERIDQX := TRESTDWServerQXID.Create(nil);
+
+   //Autenticação basica...
+   RESTDWSERVERIDQX.AuthenticationOptions.AuthorizationOption := TRDWAuthOption.rdwAOBasic;
+   TRDWAuthOptionBasic(RESTDWSERVERIDQX.AuthenticationOptions.OptionParams).Username := 'imotors';
+   TRDWAuthOptionBasic(RESTDWSERVERIDQX.AuthenticationOptions.OptionParams).Password := '102030';
+
+   //CORS...
+   RESTDWSERVERIDQX.CORS := True;
+   RESTDWSERVERIDQX.CORS_CustomHeaders.Clear;
+   RESTDWSERVERIDQX.CORS_CustomHeaders.Add('Acess-Control-Allow-Origin=*');
+   RESTDWSERVERIDQX.CORS_CustomHeaders.Add('Acess-Control-Allow-Methods=GET, POST, PATCH, PUT, DELETE, OPTIONS');
+   RESTDWSERVERIDQX.CORS_CustomHeaders.Add('Acess-Control-Allow-Headers=Content-Type, Origin, Accept, Authorization, X-CUSTOM-HEADER');
+
+   //Registra as rotas...
+   Controller.Carro.RegistrarRotas;
+
+   RESTDWSERVERIDQX.Bind(8082, false);
+end;
+
+end.
