@@ -1,0 +1,528 @@
+object FrmCarroDetalhe: TFrmCarroDetalhe
+  Left = 0
+  Top = 0
+  Caption = 'iMotors'
+  ClientHeight = 510
+  ClientWidth = 337
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object lytToolbar: TLayout
+    Align = Top
+    Size.Width = 337.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family]
+      Size.Width = 337.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = xFF393939
+      TextSettings.HorzAlign = Center
+      Text = 'Toyota Corolla'
+      TabOrder = 0
+    end
+    object imgVoltar: TImage
+      MultiResBitmap.Height = 50
+      MultiResBitmap.Width = 50
+      MultiResBitmap = <
+        item
+          Width = 50
+          Height = 50
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000320000003208060000001E3F88
+            B1000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            01DA494441546843EDD8CB2A465118C6F1CF29324288E41A1C4A914351CC3076
+            0B8A9981815B30A170058AC800296562A01C660A390C0CCC30703EFB3F65D7EE
+            6BC9E0FBE8DD7A9FFAB5A7FBDD6BED771D521E8FC7E3F1783C59491B56718735
+            D4235129460F2EF08E8FAFE70A1293028CE0122A20EE1689480526A1A9945E84
+            4644D3CB7C6A318F37A41721DB6884D9E4A109C70815F0840554C26CF2D18B53
+            848AB8C10C34E5CCA61043B842A8887B0C421DCC6C4A310DBD6CA88823F441D3
+            CE6C54C4121E102AE2009DC881D9746017A1025E30872A984D2EFA71885011CF
+            9882E9228A308C6B848AD00A3E0AD3FF833286EF3AD309F453AB83998F367EA1
+            22F6D18C3F1B09CDEF4CA2970E458BE19F76A64CBF985E58DD4ACF78CAD08573
+            9C417BAC5F4DA685EC41FF480BF4E347D168684DE986466DEBEB693A51FBD562
+            171D94E2D47EC751834444A3B283F442E4153A015623112981B6285AC9430569
+            D4D4CDB2DE08B2DD1E1FB1094DB106E8681B4F39DAA1855245A938D3F917DBF8
+            286AC903D0E2182A46970D3AC3EB74687A37ACE8057F3AEA2EC2F429311E5D3E
+            CCE2BBCB078D9AE9CB8778B48E4C2074E85273584662F22F2EE8A2E8BFD1ED8A
+            B6F9D14E40CF752432ADD8805AB416D13A783C1E8FC7E3F1A452A94F8D78C524
+            5BEACFB10000000049454E44AE426082}
+          FileName = 
+            'C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Jornada' +
+            'Dev\Mobile\Images\voltar.png'
+        end>
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = imgVoltarClick
+    end
+  end
+  object VertScrollBox1: TVertScrollBox
+    Align = Client
+    Size.Width = 337.000000000000000000
+    Size.Height = 453.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 321.000000000000000000
+    Viewport.Height = 453.000000000000000000
+    object lytFoto: TLayout
+      Align = Top
+      Size.Width = 321.000000000000000000
+      Size.Height = 230.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Layout1: TLayout
+        Align = Bottom
+        Position.Y = 145.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 85.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblValor: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Size.Width = 321.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = xFF393939
+          TextSettings.HorzAlign = Center
+          Text = 'R$ 999.999,99'
+          TabOrder = 0
+        end
+        object Rectangle1: TRectangle
+          Align = Center
+          Fill.Color = xFFEFEFEF
+          Margins.Bottom = 15.000000000000000000
+          Size.Width = 210.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 17.500000000000000000
+          YRadius = 17.500000000000000000
+          object lblCidade: TLabel
+            Align = Center
+            StyledSettings = [Family]
+            Size.Width = 210.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = xFF393939
+            TextSettings.HorzAlign = Center
+            Text = 'S'#227'o Paulo /SP'
+            TabOrder = 0
+          end
+        end
+      end
+      object ImgFoto: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Center
+        Size.Width = 120.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object rectDados: TRectangle
+      Align = Top
+      Fill.Color = xFF333333
+      Position.Y = 230.000000000000000000
+      Size.Width = 321.000000000000000000
+      Size.Height = 520.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Layout2: TLayout
+        Align = Top
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblDetalhes: TLabel
+          Align = Center
+          StyledSettings = [Family]
+          Size.Width = 260.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.FontColor = claWhite
+          Text = '1.8 GLI UPPER 16V FLEX 4P'
+          TabOrder = 0
+        end
+      end
+      object Layout3: TLayout
+        Align = Top
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 240.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Rectangle2: TRectangle
+          Align = Center
+          Fill.Color = xFF545454
+          Margins.Right = 170.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 6.000000000000000000
+          YRadius = 6.000000000000000000
+          object Label2: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'C'#226'mbio'
+            TabOrder = 0
+          end
+          object lblCambio: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Autom'#225'tico'
+            TabOrder = 1
+          end
+        end
+        object Rectangle3: TRectangle
+          Align = Center
+          Fill.Color = xFF545454
+          Margins.Left = 170.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 6.000000000000000000
+          YRadius = 6.000000000000000000
+          object Label4: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Aceita Troca'
+            TabOrder = 0
+          end
+          object lblTroca: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Sim'
+            TabOrder = 1
+          end
+        end
+      end
+      object Layout4: TLayout
+        Align = Top
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Rectangle4: TRectangle
+          Align = Center
+          Fill.Color = xFF545454
+          Margins.Right = 170.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 6.000000000000000000
+          YRadius = 6.000000000000000000
+          object Label6: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Ano'
+            TabOrder = 0
+          end
+          object lblAno: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = '2020/2020'
+            TabOrder = 1
+          end
+        end
+        object Rectangle5: TRectangle
+          Align = Center
+          Fill.Color = xFF545454
+          Margins.Left = 170.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 6.000000000000000000
+          YRadius = 6.000000000000000000
+          object Label8: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Cor'
+            TabOrder = 0
+          end
+          object lblCor: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Prata'
+            TabOrder = 1
+          end
+        end
+      end
+      object Layout5: TLayout
+        Align = Top
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 150.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object Rectangle6: TRectangle
+          Align = Center
+          Fill.Color = xFF545454
+          Margins.Right = 170.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 6.000000000000000000
+          YRadius = 6.000000000000000000
+          object Label10: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Km'
+            TabOrder = 0
+          end
+          object lblKm: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = '50.000'
+            TabOrder = 1
+          end
+        end
+        object Rectangle7: TRectangle
+          Align = Center
+          Fill.Color = xFF545454
+          Margins.Left = 170.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 6.000000000000000000
+          YRadius = 6.000000000000000000
+          object Label12: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Combust'#237'vel'
+            TabOrder = 0
+          end
+          object lblCombustivel: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Size.Width = 105.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Flex'
+            TabOrder = 1
+          end
+        end
+      end
+      object Layout6: TLayout
+        Align = Top
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 330.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object Rectangle8: TRectangle
+          Align = Center
+          Fill.Color = xFF545454
+          Size.Width = 313.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 6.000000000000000000
+          YRadius = 6.000000000000000000
+          object Label3: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Size.Width = 273.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Contato'
+            TabOrder = 0
+          end
+          object lblContato: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Size.Width = 273.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            Text = 'Giovandro F'#225'bio dos Santos'
+            TabOrder = 1
+          end
+        end
+      end
+      object Layout7: TLayout
+        Align = Top
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 420.000000000000000000
+        Size.Width = 281.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object rectContato: TRectangle
+          Align = Center
+          Fill.Color = xFF4CAF50
+          Size.Width = 315.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 8.000000000000000000
+          YRadius = 8.000000000000000000
+          object Label5: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 315.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Entrar em Contato'
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+end

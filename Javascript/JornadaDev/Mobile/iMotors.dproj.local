@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/13 11:48:59.000.844,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/10 11:01:06.000.244,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/25 10:35:49.000.664,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/01 16:48:01.000.957,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/06 19:00:17.000.550,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/06 19:14:22.000.570,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitLogin.fmx</Transaction>
+    <Transaction>2021/11/06 19:14:22.000.570,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitLogin.pas</Transaction>
+    <Transaction>2021/11/06 19:14:32.000.718,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\iMotors.dproj</Transaction>
+    <Transaction>2021/11/06 19:34:02.000.996,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas</Transaction>
+    <Transaction>2021/11/06 19:34:20.000.856,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.fmx=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitPrincipal.fmx</Transaction>
+    <Transaction>2021/11/06 19:34:20.000.856,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitPrincipal.pas</Transaction>
+    <Transaction>2021/11/06 20:38:25.000.979,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas</Transaction>
+    <Transaction>2021/11/06 20:39:03.000.963,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitCarroDetalhe.pas</Transaction>
+    <Transaction>2021/11/06 20:39:03.000.963,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.fmx=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitCarroDetalhe.fmx</Transaction>
+    <Transaction>2021/11/06 21:39:23.000.929,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas</Transaction>
+    <Transaction>2021/11/06 21:39:44.000.719,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.fmx=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitCarroCad.fmx</Transaction>
+    <Transaction>2021/11/06 21:39:44.000.719,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\UnitCarroCad.pas</Transaction>
+    <Transaction>2021/11/06 22:41:55.000.514,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas</Transaction>
+    <Transaction>2021/11/06 22:48:55.000.984,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.dfm=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Services\DataModuleCarro.dfm</Transaction>
+    <Transaction>2021/11/06 22:48:55.000.984,C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Unit1.pas=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Services\DataModuleCarro.pas</Transaction>
+    <Transaction>2021/11/07 08:19:54.376,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Comum\uFunctions.pas</Transaction>
+    <Transaction>2021/11/07 08:19:55.673,=C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\JornadaDev\Mobile\Comum\uOpenViewUrl.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="Celular" Android64="Celular"/>
+	</ActiveMobileDevice>
+</BorlandProject>

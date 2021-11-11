@@ -1,0 +1,148 @@
+unit Controller.Carro;
+
+interface
+
+uses System.JSON,
+     System.Classes,
+     System.SysUtils,
+     ServerUtils,
+     uDWConsts,
+     uDWJSONObject,
+     Controller.Comum,
+     DAO.Carro;
+
+procedure RegistrarRotas;
+
+procedure ListarCarros(Sender: TObject; RequestHeader: TStringList;
+                     const Params: TDWParams; var ContentType: string;
+                     var Result: string; const RequestType: TRequestType;
+                     var StatusCode: Integer; var ErrorMessage: string;
+                     var OutCustomHeader: TStringList);
+
+procedure CadastrarCarros(Sender: TObject; RequestHeader: TStringList;
+                     const Params: TDWParams; var ContentType: string;
+                     var Result: string; const RequestType: TRequestType;
+                     var StatusCode: Integer; var ErrorMessage: string;
+                     var OutCustomHeader: TStringList);
+
+procedure RotasCarros(Sender: TObject; RequestHeader: TStringList;
+                     const Params: TDWParams; var ContentType: string;
+                     var Result: string; const RequestType: TRequestType;
+                     var StatusCode: Integer; var ErrorMessage: string;
+                     var OutCustomHeader: TStringList);
+
+implementation
+
+uses UnitPrincipal;
+
+procedure RegistrarRotas;
+begin
+   FrmPrincipal.RESTDWSERVERIDQX.AddUrl('carros',[crGet, crPost], RotasCarros, True);
+end;
+
+procedure ListarCarros(Sender: TObject; RequestHeader: TStringList;
+                     const Params: TDWParams; var ContentType: string;
+                     var Result: string; const RequestType: TRequestType;
+                     var StatusCode: Integer; var ErrorMessage: string;
+                     var OutCustomHeader: TStringList);
+var
+   car: TCarro;
+   busca: string;
+   jsonArray : TJSONArray;
+begin
+   try
+      try
+         car := TCarro.Create;
+
+         try
+            busca := Params.ItemsString['busca'].AsString;
+         except
+            busca := '';
+         end;
+
+         try
+            car.ID_CARRO := Params.ItemsString['0'].AsInteger;
+         except
+            car.ID_CARRO := 0;
+         end;
+
+         JSONArray := car.Listar(busca);
+         Result     := jsonArray.ToJSON;
+         jsonArray.DisposeOf;
+
+      except on ex: Exception do
+         begin
+            Result     := CreateJsonObjStr('erro', ex.Message);
+            StatusCode := 500;
+         end;
+      end;
+   finally
+      car.Free;
+   end;
+end;
+
+procedure CadastrarCarros(Sender: TObject; RequestHeader: TStringList;
+                     const Params: TDWParams; var ContentType: string;
+                     var Result: string; const RequestType: TRequestType;
+                     var StatusCode: Integer; var ErrorMessage: string;
+                     var OutCustomHeader: TStringList);
+var
+   car : TCarro;
+   body : System.JSON.TJSONValue;
+begin
+   try
+      try
+         car := TCarro.Create;
+
+         body               := ParseBody(Params.RawBody.AsString);
+         car.FABRICANTE     := body.GetValue<string>('fabricante', '');
+         car.MODELO         := body.GetValue<string>('modelo', '');
+         car.DETALHES       := body.GetValue<string>('detalhes', '');
+         car.ANO_FABRICACAO := body.GetValue<integer>('ano_fabricacao', 0);
+         car.ANO_MODELO     := body.GetValue<integer>('ano_modelo', 0);
+         car.COR            := body.GetValue<string>('cor', '');
+         car.VALOR          := body.GetValue<double>('valor', 0);
+         car.KM             := body.GetValue<integer>('km', 0);
+         car.CAMBIO         := body.GetValue<string>('cambio', '');
+         car.COMBUSTIVEL    := body.GetValue<string>('combustivel', '');
+         car.CIDADE         := body.GetValue<string>('cidade', '');
+         car.UF             := body.GetValue<string>('uf', '');
+         car.IND_TROCA      := body.GetValue<string>('ind_troca', '');
+         car.URL_FOTO       := body.GetValue<string>('url_foto', '');
+         car.CONTATO        := body.GetValue<string>('contato', '');
+         car.TELEFONE       := body.GetValue<string>('telefone', '');
+         body.DisposeOf;
+
+         car.Adicionar;
+
+         Result := CreateJsonObjStr('id_carro', car.ID_CARRO);
+         StatusCode := 201;
+
+      except on ex: Exception do
+         begin
+             Result := CreateJsonObjStr('erro', ex.Message);
+             StatusCode := 500;
+         end;
+      end;
+
+   finally
+      car.Free;
+   end;
+end;
+
+procedure RotasCarros(Sender: TObject; RequestHeader: TStringList;
+                     const Params: TDWParams; var ContentType: string;
+                     var Result: string; const RequestType: TRequestType;
+                     var StatusCode: Integer; var ErrorMessage: string;
+                     var OutCustomHeader: TStringList);
+begin
+   case RequestType of
+      rtGet: ListarCarros(Sender, RequestHeader, Params, ContentType, Result,
+                          RequestType, StatusCode, ErrorMessage, OutCustomHeader);
+      rtPost: CadastrarCarros(Sender, RequestHeader, Params, ContentType, Result,
+                          RequestType, StatusCode, ErrorMessage, OutCustomHeader);
+   end;
+
+end;
+
+end.

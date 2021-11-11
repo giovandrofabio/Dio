@@ -1,0 +1,814 @@
+object FrmCarroCad: TFrmCarroCad
+  Left = 0
+  Top = 0
+  Caption = 'iMotors'
+  ClientHeight = 510
+  ClientWidth = 337
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object recToolbar: TRectangle
+    Align = Top
+    Fill.Color = xFF333333
+    Size.Width = 337.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object lblTitulo: TLabel
+      Align = Contents
+      StyledSettings = [Family]
+      Size.Width = 337.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Cadastro de Ve'#237'culo'
+      TabOrder = 1
+    end
+    object imgVoltar: TImage
+      MultiResBitmap.Width = 50
+      MultiResBitmap = <
+        item
+          Width = 50
+          Height = 50
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000320000003208060000001E3F88
+            B1000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            021E494441546843ED984D2B055118C7AFB7AEAC5810C96720A588948D1DCACE
+            5750EC280B1FC0C686C22750441648291F00CB5BAEB0B5BBD7C2FBDB8CDF33F7
+            B9CC9C9B14A5E7727EF56BCE3C734EFDE7CE9D337326E5F1783C1E8FC7F373C2
+            30EC0B8260176F718FFD0E3D541E10B88EE083788901FBA16C6147BBD887CC35
+            049EC29C9C401C6A37DACD36046DC445BCD5ECEF5013F6B4AB5D08D986EBF8AA
+            D913503FC44EED6E0F325611B00BCF0A9193507FC40D6CD221F62067350187F0
+            A2103B09F56B5CC1461D620FC2A57102F39A3B01F53B1CA759A743EC41B80642
+            2E4BD828B503F5531CA659A543EC413839892DBC8F523B503FC1019A153AC41E
+            04EC27E07194D88163CF6CD6B059BBDB837095041DC1AC8476A1FE844B344D9F
+            442D2127F12A4AED403D873334EDDE0F022167F1B399E91C8731ADDDED42C84B
+            CD9D807A06BB69FEDA95A8D4ED770975EB528D766726177EF5697C285C870FA8
+            BDE2058EA2FDBF1699FFC6CD2E10B238FDCAC32E5A28C5A124D3EF3CB6EA10DB
+            10B4078F347F02EA2FB8832DDADD3664AE27ACBCA2C893BC04EA72D56436B33F
+            1110B415E7B064252850CFE2184DFBF70D41CBFF35BE0821656135869928BD03
+            F51B94357C13BBB6FF6A1290A05F2D7537D1EE2A310E41E5E3C32A7EF6F1415E
+            69EC7E7C884350990416B064D1454DD8D6AEF62173F97FA02B4266B96FE4EB8A
+            BCE6C73F99EE6B97F282E0BD788079948768BB1EF2783C1E8FC7F3CF49A5DE00
+            3D46173F5667D8610000000049454E44AE426082}
+          FileName = 
+            'C:\Users\Giovandro\Documents\Embarcadero\Studio\Projects\Jornada' +
+            'Dev\Mobile\Images\back.png'
+        end>
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = imgVoltarClick
+    end
+  end
+  object VScroll: TVertScrollBox
+    Align = Client
+    Size.Width = 337.000000000000000000
+    Size.Height = 460.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ShowScrollBars = False
+    Viewport.Width = 337.000000000000000000
+    Viewport.Height = 460.000000000000000000
+    object Layout1: TLayout
+      Align = Top
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 16
+      object lblValor: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Nome Completo'
+        TabOrder = 0
+      end
+      object edtContato: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout2: TLayout
+      Align = Top
+      Position.Y = 300.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 15
+      object Label1: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'UF'
+        TabOrder = 0
+      end
+      object cmbUF: TComboBox
+        Align = Top
+        Items.Strings = (
+          'AL'
+          'AP'
+          'AM'
+          'BA'
+          'CE'
+          'DF'
+          'ES'
+          'GO'
+          'MA'
+          'MT'
+          'MS'
+          'MG'
+          'PA'
+          'PB'
+          'PR'
+          'PE'
+          'PI'
+          'RJ'
+          'RN'
+          'RS'
+          'RO'
+          'RR'
+          'SC'
+          'SP'
+          'SE'
+          'TO')
+        ItemIndex = 23
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object Layout3: TLayout
+      Align = Top
+      Position.Y = 100.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label2: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'WhatsApp'
+        TabOrder = 0
+      end
+      object edtFone: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Informe seu celular com DDD'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout4: TLayout
+      Align = Top
+      Position.Y = 1400.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 66.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 14
+      object Label3: TLabel
+        Align = Left
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 165.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Aceita troca'
+        TabOrder = 0
+      end
+      object swTroca: TSwitch
+        Align = Right
+        IsChecked = False
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 20.000000000000000000
+        Position.X = 239.000000000000000000
+        Position.Y = 20.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object Layout5: TLayout
+      Align = Top
+      Position.Y = 200.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label4: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Cidade'
+        TabOrder = 0
+      end
+      object edtCidade: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Cidade em que reside'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout6: TLayout
+      Align = Top
+      Position.Y = 400.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Label5: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Fabricante do ve'#237'culo'
+        TabOrder = 0
+      end
+      object edtFabricante: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: Ford, Jeep, Toyota'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout7: TLayout
+      Align = Top
+      Position.Y = 500.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Label6: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Modelo do Ve'#237'culo'
+        TabOrder = 0
+      end
+      object edtModelo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: Fusion, Renegade, Corolla'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout8: TLayout
+      Align = Top
+      Position.Y = 600.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object Label7: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Detalhes do ve'#237'culo'
+        TabOrder = 0
+      end
+      object eddtDetalhes: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: 1.8 GLI UPPER 16V FLEX 4 Portas'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout9: TLayout
+      Align = Top
+      Position.Y = 700.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object Label8: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Ano de Fabrica'#231#227'o'
+        TabOrder = 0
+      end
+      object edtAnoFabr: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: 2021'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout10: TLayout
+      Align = Top
+      Position.Y = 800.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      object Label9: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Ano do Modelo'
+        TabOrder = 0
+      end
+      object edtAnoModelo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: 2021'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout12: TLayout
+      Align = Top
+      Position.Y = 1466.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 250.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      object Label11: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'URL da foto do veiculo'
+        TabOrder = 0
+      end
+      object edtURL: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 90.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 227.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: http://google.com/foto.png'
+        object recVisualizar: TRectangle
+          Align = Right
+          Fill.Color = xFF4CAF50
+          Margins.Right = -70.000000000000000000
+          Position.X = 227.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 8.000000000000000000
+          YRadius = 8.000000000000000000
+          object Label16: TLabel
+            Align = Center
+            StyledSettings = [Family]
+            Size.Width = 70.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'Visualizar'
+            TabOrder = 1
+          end
+        end
+      end
+      object imgFoto: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Center
+        Size.Width = 138.000000000000000000
+        Size.Height = 150.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Layout13: TLayout
+      Align = Top
+      Position.Y = 1100.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      object Label12: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'C'#226'mbio'
+        TabOrder = 0
+      end
+      object cmbCambio: TComboBox
+        Align = Top
+        Items.Strings = (
+          'MANUAL'
+          'AUTOM'#193'TICO')
+        ItemIndex = 0
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object Layout14: TLayout
+      Align = Top
+      Position.Y = 900.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      object Label13: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Cor'
+        TabOrder = 0
+      end
+      object edtCor: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: Prata, preto, branco'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout15: TLayout
+      Align = Top
+      Position.Y = 1716.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 13
+      object rectSalvar: TRectangle
+        Align = Center
+        Fill.Color = xFF4CAF50
+        Margins.Left = 50.000000000000000000
+        Margins.Top = 50.000000000000000000
+        Margins.Right = 50.000000000000000000
+        Margins.Bottom = 50.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 55.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 8.000000000000000000
+        YRadius = 8.000000000000000000
+        object Label14: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 250.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Salvar dados'
+          TabOrder = 1
+        end
+      end
+    end
+    object Layout16: TLayout
+      Align = Top
+      Position.Y = 1000.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      object Label15: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Km'
+        TabOrder = 0
+      end
+      object edtKm: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: 52000(Somente n'#250'meros)'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object Layout11: TLayout
+      Align = Top
+      Position.Y = 1200.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      object Label10: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Combust'#237'vel'
+        TabOrder = 0
+      end
+      object cbmCombustivel: TComboBox
+        Align = Top
+        Items.Strings = (
+          'FLEX'
+          'GASOLINA'
+          #193'LCOOL'
+          'DIESEL'
+          'GNV'
+          'EL'#201'TRICO')
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object Layout17: TLayout
+      Align = Top
+      Position.Y = 1300.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 12
+      object Label17: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF393939
+        Text = 'Valor do ve'#237'culo'
+        TabOrder = 0
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 33.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Ex: 95000(Somente n'#250'meros)'
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+  end
+end

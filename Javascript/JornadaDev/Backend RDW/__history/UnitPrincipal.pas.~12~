@@ -1,0 +1,57 @@
+unit UnitPrincipal;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+
+  uRESTDWBaseIDQX,
+  uDWConsts,
+  uDWJSONObject,
+  uDWJSONTools,
+  ServerUtils;
+
+  //Controller.Carro;
+
+type
+  TFrmPrincipal = class(TForm)
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    RESTDWSERVERIDQX : TRESTDWServerQXID;
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+   RESTDWSERVERIDQX := TRESTDWServerQXID.Create(nil);
+
+   RESTDWSERVERIDQX.AuthenticationOptions.AuthorizationOption := TRDWAuthOption.rdwAOBasic;
+   TRDWAuthOptionBasic(RESTDWSERVERIDQX.AuthenticationOptions.OptionParams).Username := 'imotors';
+   TRDWAuthOptionBasic(RESTDWSERVERIDQX.AuthenticationOptions.OptionParams).Password := '102030';
+
+   RESTDWSERVERIDQX.CORS := True;
+   RESTDWSERVERIDQX.CORS_CustomHeaders.Clear;
+
+   RESTDWSERVERIDQX.Bind(8082, false);
+end;
+
+end.

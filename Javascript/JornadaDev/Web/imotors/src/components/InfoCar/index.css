@@ -1,0 +1,23 @@
+.pagina-info-car{
+    margin-top: 80px;
+    padding: 15px;
+}
+
+.btn-acao{
+    margin: 15px 15px 0px 15px;
+    min-width: 100px;
+}
+
+.foto {    
+    border-radius: 10px;    
+  }
+
+.badge-secondary {
+    color: rgb(58, 58, 58);
+    background-color: #e4e6e7;
+}
+
+.badge-pill {
+    padding: 0.8em;    
+    border-radius: 10rem;
+}
